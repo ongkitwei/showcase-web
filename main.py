@@ -25,15 +25,24 @@ content2 = """
 st.write(content2)
 
 
-col3, col4 = st.columns(2)
+col3, empty_col, col4 = st.columns([1.5,0.5,1.5])
 
 
 data = pandas.read_csv("data.csv",sep=";")
 for index, row in data[:10].iterrows():
     with col3:
         st.title(row["title"])
+        st.write(row["description"])
+        st.image("Images/" + row["image"])
+        st.write(f"[Source Code]({row['url']})")
 
 for index, row in data[10:].iterrows():
     with col4:
         st.title(row["title"])
+        st.write(row["description"])
+        st.image("Images/" + row["image"])
+        st.write(f"[Source Code]({row['url']})")
+
+
+
 
