@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas
 
-with st.sidebar:
-    st.write("Home")
-    st.write("Contact me")
 
+st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
+
+
+
 
 with col1:
     st.image("Images/photo.png")
@@ -13,9 +14,7 @@ with col1:
 with col2:
     st.title("Ong Kit Wei")
     content =  """
-            Hi, i am kit wei a graduate EEE student from Singapore Polytechnic (SP).
-            My interest lies in robotics and i spent my 6 months internship in a Autonomus 
-            Vehicle(AV) company working as a Test Engineer.
+            Hi, i am Ardit! I am a python programmer,, teacher and founder of PythonHow. I graduated in 2013 with a master of science in Geospatial Technologies from the University of Muenster in Germany with a focus on using Python for remote sensing. I have worked with companies from various countries, such as the Center for COnservation Geography, to map and understand Australian ecosystems, image processing with the Swiss in-Terra, and performing data mining to gain business insights with the Australian Rapid Intelligence.
                 """
     st.info(content)
 
