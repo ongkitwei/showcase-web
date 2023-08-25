@@ -19,6 +19,6 @@ From: {user_email}
     if button:
         print(button)
         print(user_message)
-        # send_email(message_sending_out)
+        send_email(message_sending_out)
         print(message_sending_out)
         st.info("Email sent successfully!")
